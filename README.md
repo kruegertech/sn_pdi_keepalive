@@ -67,6 +67,20 @@ To receive an email if a scheduled run ever fails:
 
 ## Multiple PDIs
 
-If you have more than one PDI under separate developer accounts, see the
-`multi-account` branch of this repository for a version that supports
+If you have more than one PDI under separate developer accounts, switch to 
+the `multi-account` branch of this repository for a version that supports 
 multiple logins in a single workflow run.
+
+The multi-account version uses numbered secret pairs:
+
+| Secret Name | Value |
+|---|---|
+| `SN_PDI_USERNAME_1` | Email for first developer account |
+| `SN_PDI_PASSWORD_1` | Password for first developer account |
+| `SN_PDI_USERNAME_2` | Email for second developer account |
+| `SN_PDI_PASSWORD_2` | Password for second developer account |
+| `SN_PDI_USERNAME_3` | Email for third developer account |
+| `SN_PDI_PASSWORD_3` | Password for third developer account |
+
+Add or remove secret pairs and matching `wakeInstance` calls in `index.js` 
+to match your number of accounts.
