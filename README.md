@@ -4,6 +4,10 @@ A lightweight GitHub Actions workflow that automatically logs into your
 ServiceNow Developer Portal every 8 hours to keep your Personal Developer 
 Instance (PDI) from going to sleep.
 
+> **Before you start:** This workflow will not run successfully until you 
+> have added your credentials in Step 2. Complete all setup steps before 
+> triggering a test run.
+
 ## How it works
 
 GitHub Actions runs a scheduled Node.js script using Playwright to log into
