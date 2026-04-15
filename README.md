@@ -28,8 +28,8 @@ GitHub Secrets. They will never appear in any log or file.
 
 | Secret Name | Value |
 |---|---|
-| `SN_USERNAME` | Your ServiceNow Developer Portal email address |
-| `SN_PASSWORD` | Your ServiceNow Developer Portal password |
+| `SN_PDI_USERNAME` | Your ServiceNow Developer Portal email address |
+| `SN_PDI_PASSWORD` | Your ServiceNow Developer Portal password |
 
 ### Step 3: Test it
 
