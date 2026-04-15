@@ -28,6 +28,10 @@ jobs:
 
       - name: Run keepalive script
         env:
-          SN_PDI_USERNAME: ${{ secrets.SN_PDI_USERNAME }}
-          SN_PDI_PASSWORD: ${{ secrets.SN_PDI_PASSWORD }}
+          SN_PDI_USERNAME_1: ${{ secrets.SN_PDI_USERNAME_1 }}
+          SN_PDI_PASSWORD_1: ${{ secrets.SN_PDI_PASSWORD_1 }}
+          SN_PDI_USERNAME_2: ${{ secrets.SN_PDI_USERNAME_2 }}
+          SN_PDI_PASSWORD_2: ${{ secrets.SN_PDI_PASSWORD_2 }}
+          SN_PDI_USERNAME_3: ${{ secrets.SN_PDI_USERNAME_3 }}
+          SN_PDI_PASSWORD_3: ${{ secrets.SN_PDI_PASSWORD_3 }}
         run: node index.js
