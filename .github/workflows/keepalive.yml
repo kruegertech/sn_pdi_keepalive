@@ -1,0 +1,33 @@
+name: PDI Keepalive
+
+on:
+  schedule:
+    # Runs every 8 hours - adjust to your preference
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+    # Allows you to trigger a run manually from the Actions tab
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run keepalive script
+        env:
+          SN_PDI_USERNAME: ${{ secrets.SN_PDI_USERNAME }}
+          SN_PDI_PASSWORD: ${{ secrets.SN_PDI_PASSWORD }}
+        run: node index.js
