@@ -1,0 +1,11 @@
+{
+  "name": "sn-pdi-keepalive",
+  "version": "1.0.0",
+  "description": "Keeps a ServiceNow PDI alive via scheduled login",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "playwright": "^1.43.0"
+  }
+}
